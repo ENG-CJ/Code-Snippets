@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Method Generator</Title>
+			<Shortcut>mbox_e</Shortcut>
+			<Description>Code snippet for Messagebox Enhanced</Description>
+			<Author>ENG-CJ</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Method name</ToolTip>
+					<!--<Default>MyClass</Default>-->
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+				   /// <summary>
+        /// This Method Show A Message Box With Title and message and type 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="title"></param>
+        /// <param name="type">Type such as (info,error,warning)</param>
+        public void ShowMessage(string message, string title = "Message", string type = "info")
+        {
+            if (type == "info")
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (type == "error")
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (type == "warning")
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+				
+				]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
